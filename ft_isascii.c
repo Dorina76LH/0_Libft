@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 10:05:06 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/18 13:01:50 by doberes          ###   ########.fr       */
+/*   Created: 2024/10/18 13:04:04 by doberes           #+#    #+#             */
+/*   Updated: 2024/10/18 13:42:57 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Checks for a digit (0 through 9)
+Checks for an ASCII character : code ascii between 0 and 127
 */
-
-//#include <libft.h>
 #include <stdio.h>
 #include <ctype.h>
+//#include <libft.h>
 
-int	ft_isdigit(int c)
+int	ft_isascii(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
@@ -28,40 +27,34 @@ int	ft_isdigit(int c)
 
 // int	main(void)
 // {
-// 	char	test_chars [] = {'1', '3', '0', '$', '@', ' ', '*', '\t' };
 // 	char	c;
+// 	char	test_chars [] = {'*', '/', '1', 'h', 'R', ' ', '^', 200, 43, '|'};
 // 	int		i;
 // 	int		num_chars;
 
 // 	num_chars = sizeof(test_chars) / sizeof(test_chars[0]);
-// 	// Test ft_isdigit
+// 	// Test ft_isascii
 // 	i = 0;
-// 	printf("\nTest ft_isdigit\n");
+// 	printf("\nTest ft_isascii\n");
 // 	while (i < num_chars)
 // 	{
 // 		c = test_chars[i];
-// 		if (ft_isdigit(c) == 1)
-// 			printf("The character '%c' is digit\n", c);
+// 		if (ft_isascii(c) == 1)
+// 			printf("The chararcter '%c'is ascii.\n", c);
 // 		else
-// 			printf("The character '%c' is not digit\n", c);
+// 			printf("The chararcter '%c'is not ascii.\n", c);
 // 		i++;
 // 	}
-// 	// Test isdigit
-// 	printf("\nTest isdigit\n");
+// 	// Test isascii
 // 	i = 0;
+// 	printf("\nTest isascii\n");
 // 	while (i < num_chars)
 // 	{
 // 		c = test_chars[i];
-// 		if (isdigit(c) != 0)
-// 		{
-// 			printf("The character '%c' is digit\n", c);
-// 			//printf("The value returned by isdigit : %d\n", isdigit(c));
-// 		}
+// 		if (isascii(c) != 0)
+// 			printf("The chararcter '%c'is ascii.\n", c);
 // 		else
-// 		{	
-// 			printf("The character '%c' is not digit\n", c);
-// 			//printf("The value returned by isdigit : %d\n", isdigit(c));
-// 		}
+// 			printf("The chararcter '%c'is not ascii.\n", c);
 // 		i++;
 // 	}
 // 	return (0);

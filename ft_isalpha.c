@@ -6,15 +6,15 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:52:27 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/17 15:34:17 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/18 11:54:47 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Checks for an alphabetic character (equivalent to : isupper(c) || islower(c))
 */
-//#include <stdio.h>
-//#include <ctype.h>
+#include <stdio.h>
+#include <ctype.h>
 //#include <libft.h>
 
 int	ft_isalpha(int c)
@@ -34,7 +34,7 @@ int	ft_isalpha(int c)
 
 // 	num_chars = sizeof(test_chars) / sizeof(test_chars[0]);
 // 	// Test ft_isalpha
-// 	printf("Test ft_isalpha\n");
+// 	printf("\nTest ft_isalpha\n");
 // 	i = 0;
 // 	while (i < num_chars)
 // 	{
@@ -51,10 +51,16 @@ int	ft_isalpha(int c)
 // 	while (i < num_chars)
 // 	{
 // 		c = test_chars [i];
-// 		if (isalpha(c) == 1)
+// 		if (isalpha(c) != 0)
+// 		{
 // 			printf("The character '%c' is alpha\n", c);
+// 			//printf("The value returned by isalpha : %d\n", isalpha(c));
+// 		}
 // 		else
+// 		{
 // 			printf("The character '%c' is not alpha\n", c);
+// 			//printf("The value returned by isalpha : %d\n", isalpha(c));
+// 		}
 // 		i++;
 // 	}
 // 	return (0);
