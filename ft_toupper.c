@@ -1,0 +1,64 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 14:08:40 by doberes           #+#    #+#             */
+/*   Updated: 2024/10/22 15:02:46 by doberes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+The fonction converts lowercase letters to uppercase
+ASCII uppercase A - Z : 65 - 90
+ASCII lowercase a -z : 97 - 122
+lowercase to uppercase = ASCII - 32 
+*/
+
+#include <ctype.h>
+#include <stdio.h>
+
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}
+
+// int	main(void)
+// {
+// 	// Declaring variables
+// 	char	c_original;
+// 	char	c_converted;
+// 	char	test_chars[] = {'H', 'i', ' ', '4', '2', '!', '@'};
+// 	int		i;
+// 	int		num_chars;
+
+// 	// Set variables
+// 	num_chars = sizeof(test_chars) / sizeof(test_chars [0]);
+
+// 	// Test ft_toupper
+// 	printf("\nTest fonction ft_toupper\n");
+// 	i = 0;
+// 	while (i < num_chars)
+// 	{
+// 		c_original = test_chars [i];
+// 		c_converted = ft_toupper(c_original);
+// 		printf("Original : '%c' | Converted : '%c'\n", c_original, c_converted);
+// 		i++;
+// 	}
+
+// 	// Test toupper
+// 	printf("\nTest fonction toupper\n");
+// 	i = 0;
+// 	while (i < num_chars)
+// 	{
+// 		c_original = test_chars [i];
+// 		c_converted = toupper(c_original);
+// 		printf("Original : '%c' | Converted : '%c'\n", c_original, c_converted);
+// 		i++;
+// 	}
+// 	return (0);
+// }

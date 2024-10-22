@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:16:59 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/18 14:54:19 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/22 17:20:47 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ Liste des prototypes de fonction a inclure dans la librarie
 # define LIBFT_H
 
 # include <stdio.h>
-# include <stdlib.h>
 # include <unistd.h>
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isprint(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+size_t	ft_strlen(const char *s);
 
 #endif

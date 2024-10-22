@@ -1,28 +1,32 @@
-# Nom de la bibliotheque
+# Name of final binary (static library)
 NAME = libft.a
 
-# Les fichiers sources
+# Source files
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
 		ft_isprint.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strlen.c
 
-# Les fichiers objets
-OBJ = $(SRC: .c = .o)
+# Build objects (compile .c files in $SRC and compile the into .o files)
+OBJ = $(SRC:.c=.o)
 
-# Compilateur et flags
+# Compiler and compiler flags
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-# Regle proncipale pour compiler la bibliotheque
+# Regle principale pour compiler la bibliotheque
+all: $(NAME)
+
 $(NAME) : $(OBJ)
-ar rc $(NAME) $(OBJ) # Creation de la bibliotheque
-ranlib $(NAME) # Indexation de la bibliotheque
+	$(AR) -r $(NAME) $?
 
 # Regle pour complier les fichiers objets
 %.o: %.c 
-$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) -c $(CFLAGS) $?
 
 # Nettoyage des fichiers objets
 clean:
@@ -33,4 +37,6 @@ fclean: clean
 	rm -f $(NAME)
 
 # Recompiler tout proprement
-re: fclean $(NAME)
+re: fclean all
+
+.PONY: all clean fclean re
