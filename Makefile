@@ -1,7 +1,11 @@
+#-----------------------------------
+#          NAMES and PATHS          
+#-----------------------------------
+
 # Name of final binary (static library)
 NAME = libft.a
 
-# Source files
+# List of source files
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -11,32 +15,42 @@ SRC =	ft_isalpha.c \
 		ft_tolower.c \
 		ft_strlen.c
 
-# Build objects (compile .c files in $SRC and compile the into .o files)
+# List of object files (define the name of .o files from .c files)
 OBJ = $(SRC:.c=.o)
 
-# Compiler and compiler flags
+#-----------------------------------
+#              RULES
+#-----------------------------------
+
+## // COMPILING RULES
+
+# Define compiler and compiler flags
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-# Regle principale pour compiler la bibliotheque
+# Rule for all .c files necessary to build the final binary
 all: $(NAME)
 
+# To make $(NAME), create all .o files 
 $(NAME) : $(OBJ)
 	$(AR) -r $(NAME) $?
 
-# Regle pour complier les fichiers objets
+# Compile .o files
 %.o: %.c 
 	$(CC) -c $(CFLAGS) $?
 
-# Nettoyage des fichiers objets
+## // CLEANING RULES
+
+# Remove $(OBJ) => (.o) files
 clean:
 	rm -f $(OBJ)
 
-# Nettoyage des fichiers objets de la bibliotheque
+# Remove $(NAME) => final binary
 fclean: clean
 	rm -f $(NAME)
 
-# Recompiler tout proprement
+# Remove all and compile : remove $(OBJ) and $(NAME) and compile all
 re: fclean all
 
-.PONY: all clean fclean re
+# Phony targets
+.PHONY: all clean fclean re
