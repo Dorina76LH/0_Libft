@@ -13,11 +13,14 @@ Converts ASCII string to integer
 - return value = result * sign
 */
 
-int ft_atoi(const char *str)
+#include <stdio.h>
+#include <stdlib.h>
+
+int	ft_atoi(const char *str)
 {
-    int i;
-    int sign;
-    int result;
+    int	i;
+    int	sign;
+    int	result;
 
     // skip over whitespaces
     i = 0;
@@ -41,5 +44,25 @@ int ft_atoi(const char *str)
     }
     // return coverted value
     return (result * sign);
+}
+
+int	main(void)
+{
+	// Test 1
+	char	string1[] = " 		  -+1234abc567";
+	printf("\nTest 1 \nString : %s\n", string1);
+	printf("ft_atoi | Number : %d\n", ft_atoi(string1));
+	printf("atoi    | Number : %d\n", atoi(string1));
+	// Test 2
+	char	string2[] = " 		  -2147483648abc567";
+	printf("\nTest 2 \nString : %s\n", string2);
+	printf("ft_atoi | Number : %d\n", ft_atoi(string2));
+	printf("atoi    | Number : %d\n", atoi(string2));
+	// Test 3
+	char	string3[] = " 		  +2147483647abc567";
+	printf("\nTest 3 \nString : %s\n", string3);
+	printf("ft_atoi | Number : %d\n", ft_atoi(string3));
+	printf("atoi    | Number : %d\n\n", atoi(string3));
+	return (0);
 }
 

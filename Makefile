@@ -13,7 +13,12 @@ SRC =	ft_isalpha.c \
 		ft_isprint.c \
 		ft_toupper.c \
 		ft_tolower.c \
-		ft_strlen.c
+		ft_strlen.c \
+		ft_atoi.c \
+		ft_putchar_fd.c \
+		ft_putnbr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
 
 # List of object files (define the name of .o files from .c files)
 OBJ = $(SRC:.c=.o)
