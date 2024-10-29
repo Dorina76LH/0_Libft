@@ -6,16 +6,16 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:04:04 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/18 13:42:57 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:27:23 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Checks for an ASCII character : code ascii between 0 and 127
 */
-#include <stdio.h>
-#include <ctype.h>
-//#include <libft.h>
+// #include <stdio.h>
+// #include <ctype.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

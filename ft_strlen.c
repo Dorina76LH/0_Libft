@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:56:30 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/22 16:43:45 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:29:04 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 Calculates the length of the string pointed to by s,
 excluding the terminating null byte ('\0')
 */
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

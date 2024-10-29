@@ -1,38 +1,70 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 10:05:06 by doberes           #+#    #+#             */
+/*   Updated: 2024/10/29 16:14:27 by doberes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
-The bzero() function writes n zeroed bytes to the string s.
+The  bzero() function erases the data in the n bytes of the memory starting at
+the location pointed to by s, by writing zeros (bytes containing '\0') to that
+area.
 If n is zero, bzero() does nothing.
 */
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
+#include "libft.h"
 
-ft_bzero	(void *s, size_t n)
+// void	*ft_memset(void *b, int c, size_t n)
+// {
+// 	unsigned char	*ptr;
+// 	unsigned char	value;
+// 	size_t			i;
+
+// 	i = 0;
+// 	ptr = (unsigned char *)b;
+// 	value = (unsigned char)c;
+// 	while (i < n)
+// 	{
+// 		*ptr = value;
+// 		ptr++;
+// 		i++;
+// 	}
+// 	return (ptr);
+// }
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	if (s == NULL || n ==0)
-	return
-	while (n > 0)
-	{
-		*ptr = 0;
-		ptr++;
-		n--;
-	}
+	ft_memset(s, 0, n);
 }
 
-int	main(void)
-{
-	int array[5] = {1, 2, 3, 4, 5};
-	int i;
-	int n;
+// int	main(void)
+// {
+// 	char	data[50] = "Talk to me softly. There is something in your eyes";
+// 	int		i;
+// 	int		n;
 
-	printf("Avant ft_bzero\n");
-	n = 5;
-	i = 0;
-	while (i < n)
-		{
-		printf("%d", array[i]);
-		i++;
-		}
-	return (0);
-}
+// 	printf("\nAvant memset\n");
+// 	i = 0;
+// 	n = 50;
+// 	while (i < n)
+// 	{
+// 		printf("%c", data[i]);
+// 		i++;
+// 	}
+// 	printf("\nApres memset\n");
+// 	ft_memset(data, '0', n);
+// 	i = 0;
+// 	n = 50;
+// 	while (i < n)
+// 	{
+// 		printf("%c", data[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

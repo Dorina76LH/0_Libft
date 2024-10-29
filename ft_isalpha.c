@@ -6,16 +6,16 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:52:27 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/18 11:54:47 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:27:10 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Checks for an alphabetic character (equivalent to : isupper(c) || islower(c))
 */
-#include <stdio.h>
-#include <ctype.h>
-//#include <libft.h>
+// #include <stdio.h>
+// #include <ctype.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

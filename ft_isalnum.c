@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/18 12:02:57 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/29 13:51:26 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ For isalnum : the  values  returned  are  nonzero  if
 the character c falls into the tested class, and zero if not.
 */
 
-#include <stdio.h>
-#include <ctype.h>
-//#include <libft.h>
+// #include <stdio.h>
+// #include <ctype.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

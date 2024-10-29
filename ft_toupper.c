@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:08:40 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/22 15:02:46 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:29:35 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ ASCII lowercase a -z : 97 - 122
 lowercase to uppercase = ASCII - 32 
 */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

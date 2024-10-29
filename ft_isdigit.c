@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:05:06 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/18 13:01:50 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:27:42 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 Checks for a digit (0 through 9)
 */
 
-//#include <libft.h>
-#include <stdio.h>
-#include <ctype.h>
+// #include <stdio.h>
+// #include <ctype.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
