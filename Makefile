@@ -21,7 +21,9 @@ SRC =	ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_memset.c \
 		ft_bzero.c \
-		ft_strlcpy.c
+		ft_strlcpy.c \
+		ft_strlcat.c \
+		ft_strchr.c
 
 # List of object files (define the name of .o files from .c files)
 OBJ = $(SRC:.c=.o)
