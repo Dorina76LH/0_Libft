@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:16:59 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/29 15:49:48 by doberes          ###   ########.fr       */
+/*   Updated: 2024/10/31 13:42:24 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	ft_putnbr_fd(int n, int fd);
 void	*ft_memset(void *b, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
-char *ft_strchr(const char *s, int c);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
