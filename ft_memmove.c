@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:14:20 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/03 19:55:10 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/03 22:14:11 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const unsigned char	*source;
 	size_t				i;
 
+	if (dst == src || len == 0)
+		return (dst);
 	destination = (unsigned char *)dst;
 	source = (const unsigned char *)src;
 	if (!destination || !source)
 		return (NULL);
-	if (destination > source)
+	if (destination > source && destination < (source + len))
 	{
 		i = len;
 		while (i > 0)

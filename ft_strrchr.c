@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/01 18:14:05 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/03 22:14:11 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,22 @@ occurrence of c. The functions strchr() and strrchr() return a pointer to the
 located character, or NULL if the character does not appear in the string.
 unsigned char => table ASCII
 ini = initial value of s*
+char	*ft_strrchr(const char *s, int c)
+{
+	unsigned char	unsig_char;
+	const char		*last_occ = NULL;
+
+	unsig_char = (unsigned char)(c & 0xFF);
+	while (*s)
+	{
+		if (*s == unsig_char)
+			last_occ = s;
+		s++;
+	}
+	if (unsig_char == '\0')
+		return ((char *)s);
+	return ((char *)last_occ);
+}
 */
 
 #include <string.h>
@@ -39,19 +55,18 @@ ini = initial value of s*
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	unsig_char;
-	const char		*last_occ = NULL;
+	unsigned char	to_find;
+	int				i;
 
-	unsig_char = (unsigned char)(c & 0xFF);
-	while (*s)
+	i = ft_strlen(s);
+	to_find = (unsigned char)(c & 0xFF);
+	while (i >= 0)
 	{
-		if (*s == unsig_char)
-			last_occ = s;
-		s++;
+		if ((unsigned char) s[i] == to_find)
+			return ((char *)&s[i]);
+		i--;
 	}
-	if (unsig_char == '\0')
-		return ((char *)s);
-	return ((char *)last_occ);
+	return (0);
 }
 
 //int	main(void)
