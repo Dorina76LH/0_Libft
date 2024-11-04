@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 22:29:04 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/03 21:59:46 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/04 09:39:05 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			i;
 	unsigned char	*str;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	str = (unsigned char *)s;
 	while (i < n)

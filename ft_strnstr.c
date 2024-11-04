@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:52:23 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/02 17:00:16 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/04 09:44:53 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (*needle == '\0')
 		return ((char *)haystack);
 	needle_len = ft_strlen(needle);
-	if (len == 0 || needle_len > len)
-		return (NULL);
 	i_haystack = 0;
 	while (i_haystack < len && haystack[i_haystack] != '\0')
 	{

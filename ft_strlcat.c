@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/31 14:27:35 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/04 09:34:52 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	size_t	i_src;
 	size_t	i_dst;
 
-	if (src == NULL || dst == NULL)
+	if (src == NULL && dst == NULL)
 		return (0);
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);

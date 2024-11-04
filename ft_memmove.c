@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:14:20 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/03 22:14:11 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/04 09:32:45 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	destination = (unsigned char *)dst;
 	source = (const unsigned char *)src;
-	if (!destination || !source)
+	if (!destination && !source)
 		return (NULL);
 	if (destination > source && destination < (source + len))
 	{
