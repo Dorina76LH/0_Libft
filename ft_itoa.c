@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/06 16:26:13 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/07 14:20:52 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,10 @@ int	num_length(long num)
 {
 	int	count;
 
-	count = 0;
+	count = 1;
 	if (num < 0)
 	{
 		count++;
-		if (num == -2147483648)
-		{
-			num = num / 10;
-			count++;
-		}
 		num = num * -1;
 	}
 	while (num > 9)
@@ -46,7 +41,6 @@ int	num_length(long num)
 		num = num / 10;
 		count++;
 	}
-	count++;
 	return (count);
 }
 
@@ -61,14 +55,16 @@ char	*ft_itoa(int nbr)
 	if (nbr == 0)
 		return (ft_strdup("0"));
 	len = num_length(nbr);
-	result = (char *)calloc((len + 1), sizeof(char));
+	result = (char *)ft_calloc((len + 1), sizeof(char));
+	if (!result)
+		return (NULL);
 	position = len - 1;
 	if (nbr < 0)
 	{
 		result[0] = '-';
 		nbr = nbr * -1;
 	}
-	while (nbr > 0)
+	while (nbr > 0 && position >= 0)
 	{
 		result[position] = (nbr % 10) + '0';
 		nbr = nbr / 10;
@@ -77,24 +73,23 @@ char	*ft_itoa(int nbr)
 	return (result);
 }
 
-/*
-int	main(void)
-{
-	int numbers[] = {-2147483648, -7000, 0, 42, 2147483647};
-	int n = sizeof(numbers) / sizeof(numbers[0]);
-	int i = 0;
+// int	main(void)
+// {
+// 	int numbers[] = {-1234};
+// 	int n = sizeof(numbers) / sizeof(numbers[0]);
+// 	int i = 0;
 
-	while (i < n)
-	{
-		char *str = ft_itoa(numbers[i]);
-		if (str != NULL)
-		{
-			printf("Itoa (%d) = %s\n", numbers[i], str);
-			free(str);
-		}
-		else
-			printf("Erreur d'allocation de la memoire pour %d\n", numbers[i]);
-		i++;
-	}
-	return (0);
-}*/
+// 	while (i < n)
+// 	{
+// 		char *str = ft_itoa(numbers[i]);
+// 		if (str != NULL)
+// 		{
+// 			printf("Itoa (%d) = %s\n", numbers[i], str);
+// 			free(str);
+// 		}
+// 		else
+// 			printf("Erreur d'allocation de la memoire pour %d\n", numbers[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

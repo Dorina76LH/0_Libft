@@ -30,6 +30,7 @@ SRC =	ft_isalpha.c \
 		ft_strjoin.c \
 		ft_substr.c \
 		ft_strtrim.c \
+		ft_striteri.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
