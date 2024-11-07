@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:16:59 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 17:24:38 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/07 21:30:34 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Liste des prototypes de fonction a inclure dans la librarie
 # define LIBFT_H
 
 # include <stdio.h> // printf
-# include <stdlib.h> // atoi
+# include <stdlib.h> // atoi, malloc
 # include <string.h> // strlen
 # include <unistd.h> // write
 # include <ctype.h> // sizeof
@@ -59,7 +59,7 @@ char	*ft_itoa(int n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_striteri(char *str, void (*f)(unsigned int, char*));
-//char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 //char  **ft_split(char const *s, char c);
 
 #endif
