@@ -6,44 +6,15 @@
 /*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:05:37 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/05 22:51:48 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/08 22:38:23 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The calloc() function contiguously allocates enough space for count objects
-that are size bytes of memory each and returns a pointer to the allocated
-memory. The allocated memory is filled with bytes of value zero.
+gcc -Wall -Werror -Wextra ft_calloc.c ft_bzero.c ft_memset.c
 */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
-
-/*
-void	*ft_memset(void *b, int c, size_t n)
-{
- 	unsigned char	*ptr;
- 	unsigned char	value;
- 	size_t			i;
-
- 	i = 0;
- 	ptr = (unsigned char *)b;
- 	value = (unsigned char)c;
- 	while (i < n)
- 	{
- 		*ptr = value;
- 		ptr++;
- 		i++;
- 	}
- 	return (ptr);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
-}
-*/
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -56,8 +27,31 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
-//int	main(void)
-//{
-//
-//	return (0);
-//}
+/*
+int	main(void)
+{
+	int	n = 10;
+	size_t size = sizeof(int);
+
+	int *array = (int *)ft_calloc(n, size);
+ 	if (array == NULL)
+	{
+        printf("Échec de l'allocation mémoire.\n");
+        return 1; // Sortir si allocation échoue
+    }
+
+      // Afficher les valeurs dans array avec une boucle while
+    int i = 0;
+    while (i < n) 
+	{
+        printf("%d ", array[i]); // Chaque élément doit être 0
+        i++;
+    }
+    printf("\n");
+
+    // Libérer la mémoire allouée
+    free(array);
+	
+	return (0);
+}
+*/
