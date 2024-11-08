@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 19:04:45 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/08 16:28:17 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	// if (!str || !f)
-	// 	return ;
 	i = 0;
 	while (str[i])
 	{
@@ -50,7 +48,7 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char*))
 	}
 	return ;
 }
- /*
+/*
  int	main(void)
  {
  	char	string1[] = "tankcsapda";

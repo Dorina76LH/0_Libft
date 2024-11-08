@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:16:59 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 21:30:34 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/08 13:16:28 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_striteri(char *str, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
-//char  **ft_split(char const *s, char c);
+char	**ft_split(char const *str, char c);
 
 #endif
