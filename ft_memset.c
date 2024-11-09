@@ -6,20 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:05:06 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 12:16:36 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 12:02:19 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-memset – fill a byte string with a byte value
-writes len bytes of value c (converted to an unsigned char) to the string b
-The memset() function returns its first argument.
-- convert '*b' in unsigned char * to write in the memory octet by octet
-- convert 'c' in unigned char => only 1 octet (0-255)
-- loop with i and n => type size_t for i and n
+gcc -Wall -Werror -Wextra ft_memset.c
 */
 
-//#include <string.h>
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t n)

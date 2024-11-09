@@ -6,41 +6,15 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/04 09:34:52 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:54:33 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Strlcat() function copies and concatenates strings. Strlcat() takes the full size
-of the destination buffer and guarantee NUL-termination if there is room. Room
-for the NUL should be included in dstsize. Strlcat() only operates on true 'C'
-strings. This means for strlcat() both src and dst() must be NUL-terminated.
-Strlcat() appends string src to the end of dst.
-It will append at most dstsize - strlen(dst) - 1 characters.
-It will then NUL-terminate, unless dstsize is 0 or the original dst string was
-longer than dstsize (in practice this should not happen as it means that either
-dstsize is incorrect or that dst is not a proper string).
-If the src and dst strings overlap, the behavior is undefined.
-Like snprintf(3), strlcat() functions returns the total length of the string.
-For strlcat() that means the initial length of dst plus the length of src.
-If the return value is >= dstsize, the output string has been truncated.
+gcc -Wall -Wextra -Werror ft_strlcat.c ft_strlen.c -lbsd
 */
 
-// #include <string.h>
-// #include <stdio.h>
 #include "libft.h"
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	return (i);
-// }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {

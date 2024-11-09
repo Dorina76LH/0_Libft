@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 09:16:59 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/08 18:46:20 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:50:37 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <ctype.h>
+# include <bsd/string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

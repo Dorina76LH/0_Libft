@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:05:06 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/06 22:06:55 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 11:08:48 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Checks for a digit (0 through 9)
+gcc -Wall -Werror -Wextra ft_isdigit.c
 */
 
-// #include <stdio.h>
-// #include <ctype.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)

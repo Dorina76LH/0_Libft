@@ -6,18 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:04:55 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/29 11:29:15 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:58:53 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The fonction converts uppercase letters to lowercase
-ASCII uppercase A - Z : 65 - 90
-ASCII lowercase a -z : 97 - 122
-lowercase to uppercase = ASCII + 32 
+gcc -Wall -Werror -Wextra ft_tolower.c
 */
-// #include <stdio.h>
-// #include <ctype.h>
+
 #include "libft.h"
 
 int	ft_tolower(int c)

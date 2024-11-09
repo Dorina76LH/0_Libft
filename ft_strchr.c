@@ -6,22 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/31 14:31:55 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 14:56:56 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The strchr() function locates the first occurrence of c (converted to a char)
-in the string pointed to by s. The terminating null character is considered to
-be part of the string. If c is ‘\0’, the functions locate the terminating ‘\0’.
-The strrchr() function is identical to strchr(), except it locates the last
-occurrence of c. The functions strchr() and strrchr() return a pointer to the
-located character, or NULL if the character does not appear in the string.
-unsigned char => table ASCII
+gcc -Wall -Werror -Wextra ft_strchr.c
 */
 
-// #include <string.h>
-// #include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)

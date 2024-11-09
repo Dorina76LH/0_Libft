@@ -6,21 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:44:01 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/29 11:27:58 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 11:12:40 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Checks for any printable character including space
-- upper case (A-Z)
-- lower case (a-z)
-- digit (0-9)
-- symbols (~ ! @ # $ % ^ & * , - +  etc.)
-- space (ASCII 32)
-- between ASCII 32 (space) and ASCII 126 (~)
+gcc -Wall -Werror -Wextra ft_isprint.c
 */
-// #include <stdio.h>
-// #include <ctype.h>
+
 #include "libft.h"
 
 int	ft_isprint(int c)

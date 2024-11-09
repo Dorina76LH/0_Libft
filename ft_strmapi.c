@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 22:06:22 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:27:21 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 cc -Wall -Werror -Wextra ft_strmapi.c ft_strlen.c 
 */
+
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
@@ -39,24 +37,23 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-/*
-char	uppercase(unsigned int i, char c)
-{
-	(void)i;
 
-	while (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
+// static char	uppercase(unsigned int i, char c)
+// {
+// 	(void)i;
 
-int	main(void)
-{
-	const char	*origin = "42 : hello world !";
-	char		*result = ft_strmapi(origin, uppercase);
-	if (!result)
-		return (0);
-	printf("Chaine origine : %s\n", origin);
-	printf("Resultat       : %s\n", result);
-	return (0);
-}
-*/
+// 	while (c >= 'a' && c <= 'z')
+// 		return (c - 32);
+// 	return (c);
+// }
+
+// int	main(void)
+// {
+// 	const char	*origin = "42 : hello world !";
+// 	char		*result = ft_strmapi(origin, uppercase);
+// 	if (!result)
+// 		return (0);
+// 	printf("Chaine origine : %s\n", origin);
+// 	printf("Resultat       : %s\n", result);
+// 	return (0);
+// }

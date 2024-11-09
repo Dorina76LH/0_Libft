@@ -6,19 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/29 13:51:26 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:14:46 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The fonction uses the file descriptor to write a string followed by a new line
-File descriptor :
-- 0 : stdin (by default : keyboard)
-- 1 : stdout (by default : command line)
-- 2 : stderr (bu default : command line)
+gcc -Wall -Wextra -Werror ft_putendl_fd.c
 */
 
-// #include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

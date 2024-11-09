@@ -6,35 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 22:29:04 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/04 09:39:05 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:05:38 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The memchr() function locates the first occurrence of c (converted to an
-unsigned char) in string s. The memchr() function returns a pointer to the byte
-located, or NULL if no such byte exists within n bytes.
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	const unsigned char	*str;
-	unsigned char		value;
-	size_t				i;
-
-	value = (unsigned char)c;
-	str = (const unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (str[i] == value)
-			return ((void *)(str + i));
-	}
-	i++;
-	return (NULL);
-}
+gcc -Wall -Werror -Wextra ft_memchr.c
 */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -52,3 +31,29 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+// int main(void)
+// {
+// 	char str[] = "Hello, world!";
+// 	printf("Chaine : %s\n", str);
+// 	char *result = memchr(str, 'w', strlen(str));
+// 	if (!result)
+// 		printf("Memchr : 'w' trouvee a la position %ld.\n", result - str);
+// 	else
+// 		printf("Memchr : 'w' non trouvee.\n");
+// 	char *result2 = ft_memchr(str, 'w', strlen(str));
+// 	if (!result)
+// 		printf("Ft_memchr : 'w' trouvee a la position %ld.\n", result2 - str);
+// 	else
+// 		printf("Ft_memchr : 'w' non trouvee.\n");
+// 	result = memchr(str, 'z', strlen(str));
+// 	if (!result)
+// 		printf("Memchr : 'z' trouvee a la position %ld.\n", result - str);
+// 	else
+// 		printf("Memchr : 'z' non trouvee.\n");
+// 	result2 = ft_memchr(str, 'z', strlen(str));
+// 	if (!result)
+// 		printf("Ft_memchr : 'z' trouvee a la position %ld.\n", result2 - str);
+// 	else
+// 		printf("Ft_memchr : 'z' non trouvee.\n");
+// 	return (0);
+// }

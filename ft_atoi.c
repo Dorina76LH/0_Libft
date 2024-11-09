@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doberes <doberes@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/08 18:53:27 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 10:31:10 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** gcc -Wall -Werror -Wextra ft_atoi.c
+gcc -Wall -Werror -Wextra ft_atoi.c
 */
 
 #include "libft.h"
@@ -42,24 +42,22 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-/*
-int	main(void)
-{
- 	// Test 1
- 	char	string1[] = " 		  -+1234abc567";
- 	printf("\nTest 1 \nString : %s\n", string1);
- 	printf("ft_atoi | Number : %d\n", ft_atoi(string1));
- 	printf("atoi    | Number : %d\n", atoi(string1));
- 	// Test 2
- 	char	string2[] = " 		  -2147483648abc567";
- 	printf("\nTest 2 \nString : %s\n", string2);
- 	printf("ft_atoi | Number : %d\n", ft_atoi(string2));
- 	printf("atoi    | Number : %d\n", atoi(string2));
- 	// Test 3
- 	char	string3[] = " 		  +2147483647abc567";
- 	printf("\nTest 3 \nString : %s\n", string3);
- 	printf("ft_atoi | Number : %d\n", ft_atoi(string3));
- 	printf("atoi    | Number : %d\n\n", atoi(string3));
- 	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	// Test 1
+// 	char	string1[] = " 		  -+1234abc567";
+// 	printf("\nTest 1 \nString : %s\n", string1);
+// 	printf("ft_atoi | Number : %d\n", ft_atoi(string1));
+// 	printf("atoi    | Number : %d\n", atoi(string1));
+// 	// Test 2
+// 	char	string2[] = " 		  -2147483648abc567";
+// 	printf("\nTest 2 \nString : %s\n", string2);
+// 	printf("ft_atoi | Number : %d\n", ft_atoi(string2));
+// 	printf("atoi    | Number : %d\n", atoi(string2));
+// 	// Test 3
+// 	char	string3[] = " 		  +2147483647abc567";
+// 	printf("\nTest 3 \nString : %s\n", string3);
+// 	printf("ft_atoi | Number : %d\n", ft_atoi(string3));
+// 	printf("atoi    | Number : %d\n\n", atoi(string3));
+// 	return (0);
+// }

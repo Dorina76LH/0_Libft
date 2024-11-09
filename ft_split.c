@@ -6,48 +6,12 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/08 17:11:10 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:58:37 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** >> count_word
-** Compter le nombre de mots dans la chaine string a l'aide du separateur
-** Calcule la taille a allouer pour le tb de chaine de caracteres
-** Word_count : compteur pour compter les mots
-** if : debut d'un nouveau mot si string[i] n'est pas un separateur
-** while : Avancer jusau'a la fin du mot (string[i] = '\0' ou separateur)
-**
-** >> word_len
-** Trouver la longueur du mot a partir de l'index actuel dans la chaine string
-** While (trouver le mot): tant qu'il ne rencontre pas de separateur ou '\0'
-** Retour : i : longueur du mot (nb de car avant le separateur ou '\0')
-**
-** >> word_copy
-** Copier un mot a partir de la chaine str jusqu'au separateur c et retourner
-** cette nouvelle chaine
-** word : alloue avec malloc (len_word + 1) pour  inclure '\0'
-** while : copie chaque car dans word jusqu'au separateur ou '\0'
-** word est termine par '\0'
-** retour : ptr vers le nouveau mot
-**
-** >> free_result
-** Libere la memoire allouee au tableau 'result'
-**
-** >> ft_split
-** Separer str en sous chaines en utilisant le separateur
-** i_str : sert a parcourir str
-** i_result : sert a remplir le tableau
-** Allouer le tableau de chaine de car avec malloc (word_count + 1 => '\0')
-** while : Parcourir 'str' jusqu'au '\0'
-** if : Ignorer si str == c (c = separateur)
-** else : Quand str !=c => c'est un mot
-** if : word_copy : copier le mot dans resul
-** free_result : Nettoyer en cas d'erreur
-** passer a la ligne suivante du tableau
-** Avancer 'i_str' de la longueur de mot
-** Marquer la fin du tableau
-**
+gcc -Wall -Werror -Wextra ft_split.c ft_strlen.c
 */
 
 #include "libft.h"

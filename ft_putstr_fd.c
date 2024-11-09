@@ -6,14 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/10/29 11:28:55 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:23:45 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
+gcc -Wall -Werror -Wextra ft_putstr_fd.c
 */
 
-// #include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

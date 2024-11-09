@@ -6,27 +6,18 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 14:20:52 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:03:48 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Fonction that takes an int nd converts it to a null-terminated string.
-The function returns the result in a char array that must be allocated.
-- Calculate the length of the number
-Gestion '\0'
-- 0 et int min => strdup rajoute le car fin de chaine
-- pour les autres cèst fait par calloc au moment de l'allocation memoire
 gcc -Wall -Werror -Wextra
-ft_itoa.c ft_strlen.c ft_strdup.c ft_calloc.c ft_memset.c ft_bzero.c
+ft_itoa.c ft_strlen.c ft_strdup.c ft_calloc.c ft_bzero.c
 */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-int	num_length(long num)
+static int	num_length(long num)
 {
 	int	count;
 

@@ -6,33 +6,15 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/04 14:01:42 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 15:12:34 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The fonction copies in *result : string1 + string2 + '\0 and returns *result
-- Calculate the length of string1 and string2
-- Allocate memory for the copy (total_len = len_str1 + len_str2 + 1 => ('\0))
-- Copy str1, str2 and '\0' in result
-- Return value : result
+gcc -Wall -Werror -Wextra ft_strjoin.c ft_strlen.c
 */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	return (i);
-// }
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -67,7 +49,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // {
 // 	// Declaration des variables
 // 	const char	*str1 = "En mar nem muzsikalok, csak egy jelet adok a gepnek:";
-// 	const char	*st22 = "o mutassa meg helyettem amikor mozdul bennem a lelek";
+// 	const char	*str2 = "o mutassa meg helyettem amikor mozdul bennem a lelek";
 // 	char		*result;
 
 // 	// Imprimer str1 et str2

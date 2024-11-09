@@ -6,21 +6,15 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 14:12:43 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 15:42:15 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-*s : source
-start : index de depart pour l'extraction
-len : taille a extraire
 gcc -Wall -Werror -Wextra 
-ft_substr.c ft_strlen.c ft_bzero.c ft_memset.c ft_calloc.c
+ft_substr.c ft_strlen.c ft_bzero.c ft_memset.c ft_calloc.c ft_strdup.c
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -50,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 // int	main(void)
 // {
-// 	char  *texte = "halo";
+// 	char  *texte = "En mar nem muzsikalok";
 // 	char  *resultat;
 
 // 	printf("Texte : %s \n", texte);
@@ -58,17 +52,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	resultat = ft_substr(texte, 3, 2);
 // 	printf("Extrait : %s\n", resultat);
 // 	free (resultat);
-// 	// // Exemple 2 : Chaine valide
-// 	// resultat = ft_substr(texte, 7, 13);
-// 	// printf("Extrait : %s\n", resultat);
-// 	// free (resultat);
-// 	// // Exemple 3 : Debordement longueur
-// 	// resultat = ft_substr(texte, 7, 25);
-// 	// printf("Extrait : %s\n", resultat);
-// 	// free (resultat);
-// 	// // Start en dehors de len_total
-// 	// resultat = ft_substr(texte, 30, 13);
-// 	// printf("Extrait : %s\n", resultat);
-// 	// free (resultat);
+// 	// Exemple 2 : Chaine valide
+// 	resultat = ft_substr(texte, 7, 13);
+// 	printf("Extrait : %s\n", resultat);
+// 	free (resultat);
+// 	// Exemple 3 : Debordement longueur
+// 	resultat = ft_substr(texte, 7, 25);
+// 	printf("Extrait : %s\n", resultat);
+// 	free (resultat);
+// 	// Start en dehors de len_total
+// 	resultat = ft_substr(texte, 30, 13);
+// 	printf("Extrait : %s\n", resultat);
+// 	free (resultat);
 // 	return (0);
 // }

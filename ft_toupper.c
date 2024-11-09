@@ -6,19 +6,14 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:08:40 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/07 16:09:11 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:30:24 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The fonction converts lowercase letters to uppercase
-ASCII uppercase A - Z : 65 - 90
-ASCII lowercase a -z : 97 - 122
-lowercase to uppercase = ASCII - 32 
+gcc -Wall -Werror -Wextra ft_toupper.c
 */
 
-// #include <ctype.h>
-// #include <stdio.h>
 #include "libft.h"
 
 int	ft_toupper(int c)
