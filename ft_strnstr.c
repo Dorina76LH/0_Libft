@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:52:23 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 15:55:16 by doberes          ###   ########.fr       */
+/*   Updated: 2024/12/06 14:15:22 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (*needle == '\0')
 		return ((char *)haystack);
-	needle_len = ft_strlen(needle);
+	needle_len = 0;
+	while (needle[needle_len] != '\0')
+		needle_len++;
 	i_haystack = 0;
 	while (i_haystack < len && haystack[i_haystack] != '\0')
 	{
