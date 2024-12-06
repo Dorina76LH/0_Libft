@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:05:37 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 16:03:11 by doberes          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:20:07 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,20 @@ gcc -Wall -Werror -Wextra ft_calloc.c ft_bzero.c
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	void			*ptr;
+	unsigned char	*byte_ptr;
+	size_t			i;
 
 	ptr = (void *)malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, count * size);
+	byte_ptr = (unsigned char *)ptr;
+	i = 0;
+	while (i < (count * size))
+	{
+		byte_ptr[i] = 0;
+		i++;
+	}
 	return (ptr);
 }
 

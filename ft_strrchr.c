@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 15:57:00 by doberes          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:32:40 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned char	to_find;
 	int				i;
 
-	i = ft_strlen(s);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
 	to_find = (unsigned char)(c & 0xFF);
 	while (i >= 0)
 	{

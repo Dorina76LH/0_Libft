@@ -6,15 +6,22 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 16:27:29 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:01:02 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-gcc -Wall -Werror -Wextra ft_striteri.c ft_strlen.c ft_strdup.c ft_toupper.c
+gcc -Wall -Werror -Wextra ft_striteri.c ft_strlen.c ft_strdup.c
 */
 
 #include "libft.h"
+
+// int	ft_toupper(int c)
+// {
+// 	if (c >= 'a' && c <= 'z')
+// 		c = c - 32;
+// 	return (c);
+// }
 
 // static void	getallupper(unsigned int i, char *str)
 // {

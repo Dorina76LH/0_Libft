@@ -6,30 +6,32 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 15:42:15 by doberes          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:18:46 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 gcc -Wall -Werror -Wextra 
-ft_substr.c ft_strlen.c ft_bzero.c ft_memset.c ft_calloc.c ft_strdup.c
+ft_substr.c ft_strlen.c ft_calloc.c ft_strdup.c
 */
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	len_total;
+	size_t	str_len;
 	size_t	i;
 	char	*extract_str;
 
 	if (s == NULL)
 		return (NULL);
-	len_total = ft_strlen(s);
-	if (start >= len_total)
-		return (ft_strdup(""));
-	if (start + len > len_total)
-		len = len_total - start;
+	str_len = 0;
+	while (s[str_len] != '\0')
+		str_len++;
+	if (start >= str_len)
+		return (ft_calloc(1, sizeof(char)));
+	if (start + len > str_len)
+		len = str_len - start;
 	extract_str = malloc(len + 1);
 	if (!extract_str)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 13:53:30 by doberes          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:23:46 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	src_len;
 
-	src_len = ft_strlen(src);
+	src_len = 0;
+	while (src[src_len] != '\0')
+		src_len++;
 	if (src == NULL || dst == NULL)
 		return (0);
 	if (size != 0)

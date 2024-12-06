@@ -6,7 +6,7 @@
 /*   By: doberes <doberes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:08:35 by doberes           #+#    #+#             */
-/*   Updated: 2024/11/09 16:27:21 by doberes          ###   ########.fr       */
+/*   Updated: 2024/11/09 15:53:38 by doberes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	return (result);
 }
 
-// static char	uppercase(unsigned int i, char c)
+// char	uppercase(unsigned int i, char c)
 // {
 // 	(void)i;
 
